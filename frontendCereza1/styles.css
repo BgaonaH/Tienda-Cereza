@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+header {display: flex;
+    justify-content: space-around;
+    background-color: #C51D34;
+    padding: 10px;
+    font-weight: bold;
+    color:#ccc
+   }
+
+   div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:auto; /* Puedes ajustar esto según tus necesidades */
+}
+
+div img {
+    max-width: 80%;
+    max-height: 80%;
+}
+
+div h4{
+    color: #000;
+   font-size: 30px;
+    font-weight: bold;
+}
+header a {
+    color: #fff;
+  }
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+article {
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 30%;
+}
+article img {
+    height: 250px; /* Establece la altura fija en píxeles */
+    object-fit: cover; /* Para mantener la proporción de la imagen */
+    width: 200px;
+   /* height: auto; e usa para altura automatica*/
+}
+
+
+footer {
+    text-align:center;
+    padding: 10px;
+    background-color: #C51D34;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+}
