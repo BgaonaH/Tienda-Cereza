@@ -5,14 +5,95 @@ body {
     background-color: #fff;
 }
 
-header {display: flex;
-    justify-content: space-around;
-    background-color: #C51D34;
-    padding: 10px;
-    font-weight: bold;
-    color:#ccc
-   }
 
+header {
+    background-color: #C51D34; /* Color de fondo del encabezado */
+    color: #fff; /* Color del texto del encabezado */
+    padding: 15px; /* Espaciado interno del encabezado */
+    display: flex; /* Establece el contenedor del encabezado como un flexbox */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+    align-items: center; /* Centra verticalmente los elementos dentro del encabezado */
+    min-height: 40px;
+    width: 100%;
+    
+}
+/* Estilo para ocultar el icono de hamburguesa cuando el menú está activo */
+.hamburguesa.active .bar {
+    display: none;
+}
+.div-hamburguesa{
+    margin-left: auto; /* Ajusta el margen izquierdo para que la hamburguesa se mueva a la derecha */
+    margin-right: 20px; /* Ajusta el margen derecho según sea necesario */
+}
+/* Estilos para el botón de hamburguesa */
+.hamburguesa {
+    display: none; /* Oculta el botón de hamburguesa por defecto */
+    flex-direction: column; /* Establece la dirección de los elementos internos del botón */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón */
+    
+}
+
+/* Estilos para las barras del botón de hamburguesa */
+.bar {
+    width: 25px; /* Ancho de las barras */
+    height: 3px; /* Altura de las barras */
+    background-color: #fff; /* Color de las barras */
+    margin: 3px 0; /* Espaciado entre las barras */
+}
+
+/* Estilos para el menú */
+.menu {
+    display: flex; /* Establece el menú como un flexbox */
+    flex-grow: 1; /* Hace que el menú ocupe todo el espacio disponible */
+}
+
+/* Estilos para la lista de navegación */
+.menu ul {
+    list-style: none; /* Quita los estilos de lista predeterminados */
+    padding: 0; /* Quita el relleno predeterminado de la lista */
+    margin: 0; /* Quita los márgenes predeterminados de la lista */
+    display: flex; /* Establece la lista como un flexbox */
+    flex-grow: 1; /* Hace que la lista se expanda para ocupar todo el espacio disponible */
+    justify-content: space-around; /* Distribuye uniformemente los elementos de la lista */
+}
+
+/* Estilos para los elementos de la lista */
+.menu ul li {
+    margin-left: 20px; /* Añade un margen izquierdo a cada elemento de la lista */
+}
+
+/* Estilos para el primer elemento de la lista */
+.menu ul li:first-child {
+    margin-left: 0; /* Elimina el margen izquierdo del primer elemento de la lista */
+}
+
+/* Estilos para los enlaces dentro de los elementos de la lista */
+.menu ul li a {
+    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+    color: #fff; /* Color del texto de los enlaces */
+}
+
+/* Estilos para el menú desplegable en pantallas pequeñas */
+@media (max-width: 768px) {
+    .hamburguesa {
+        display: flex; /* Muestra el botón de hamburguesa en pantallas pequeñas */
+    }
+
+    .menu {
+        display: none; /* Oculta el menú por defecto en pantallas pequeñas */
+        flex-direction: column; /* Establece la dirección de los elementos del menú desplegable */
+        background-color: #C51D34; /* Color de fondo del menú desplegable */
+        width: 100%; /* Ancho completo del menú desplegable */
+        position: absolute; /* Posicionamiento absoluto del menú desplegable */
+        top: 32px; /* Desplaza el menú desplegable hacia abajo para evitar que se solape con el encabezado */
+        left: 0; /* Coloca el menú desplegable en el extremo izquierdo de la pantalla */
+        z-index: 1; /* Asegura que el menú desplegable esté por encima de otros elementos */
+    }
+
+    .menu.active {
+        display: flex; /* Muestra el menú desplegable cuando está activo */
+    }
+}
    div {
     display: flex;
     justify-content: center;
@@ -21,8 +102,8 @@ header {display: flex;
 }
 
 div img {
-    max-width: 80%;
-    max-height: 80%;
+    max-width: 28%;
+    max-height: 2%;
 }
 
 div h4{
@@ -52,8 +133,8 @@ article {
 article img {
     height: 250px; /* Establece la altura fija en píxeles */
     object-fit: cover; /* Para mantener la proporción de la imagen */
-    width: 200px;
-   /* height: auto; e usa para altura automatica*/
+    max-width: 70%;
+    height: 70%;
 }
 
 
